@@ -27,6 +27,23 @@ export default function Home() {
           streamlines medical records, and improves overall patient care.
         </p>
 
+        {/* New search bar */}
+        <div className="w-full max-w-2xl">
+          <form className="relative">
+            <input
+              type="text"
+              placeholder="Search your symptoms..."
+              className="w-full px-5 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 text-lg"
+            />
+            <button
+              type="submit"
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-colors"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+
         <div className="flex gap-4 items-center flex-col sm:flex-row">
           <a
             className="rounded-full bg-blue-600 text-white px-8 py-3 text-lg font-semibold hover:bg-blue-700 transition-colors"
