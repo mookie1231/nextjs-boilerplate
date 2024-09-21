@@ -32,7 +32,7 @@ export default function Home() {
           <form className="relative">
             <input
               type="text"
-              placeholder="Search your symptoms..."
+              placeholder="Search your symptoms and find solutions..."
               className="w-full px-5 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 text-lg"
             />
             <button
