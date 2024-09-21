@@ -1,5 +1,7 @@
 import Image from "next/image";
-import SearchBar from "./components/SearchBar";
+import dynamic from 'next/dynamic';
+
+const SearchBar = dynamic(() => import('./components/SearchBar'), { ssr: false });
 
 export default function Home() {
   return (
@@ -28,7 +30,7 @@ export default function Home() {
           streamlines medical records, and improves overall patient care.
         </p>
 
-        {/* New SearchBar component */}
+        {/* SearchBar component */}
         <SearchBar />
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
