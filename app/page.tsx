@@ -20,7 +20,7 @@ export default function Home() {
 
       <main className="flex flex-col gap-12 items-center text-center">
         <h1 className="text-4xl sm:text-6xl font-bold text-blue-900">
-          Revolutionizing Healthcare with Technology
+          Giving Patients Superpowers
         </h1>
         <p className="text-xl text-gray-700 max-w-2xl">
           Our innovative platform connects patients with healthcare providers, 
