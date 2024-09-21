@@ -2,99 +2,60 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+    <div className="grid grid-rows-[auto_1fr_auto] min-h-screen p-8 pb-20 gap-16 sm:p-20 font-sans bg-blue-50">
+      <header className="flex justify-between items-center">
         <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
+          src="/logo.svg" // Replace with your logo
+          alt="HealthTech Logo"
           width={180}
           height={38}
           priority
         />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Mookie watch you build things that were not possible before.</li>
-        </ol>
+        <nav className="hidden sm:flex gap-6">
+          <a href="#features" className="text-blue-600 hover:text-blue-800">Features</a>
+          <a href="#about" className="text-blue-600 hover:text-blue-800">About Us</a>
+          <a href="#contact" className="text-blue-600 hover:text-blue-800">Contact</a>
+        </nav>
+      </header>
+
+      <main className="flex flex-col gap-12 items-center text-center">
+        <h1 className="text-4xl sm:text-6xl font-bold text-blue-900">
+          Revolutionizing Healthcare with Technology
+        </h1>
+        <p className="text-xl text-gray-700 max-w-2xl">
+          Our innovative platform connects patients with healthcare providers, 
+          streamlines medical records, and improves overall patient care.
+        </p>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            className="rounded-full bg-blue-600 text-white px-8 py-3 text-lg font-semibold hover:bg-blue-700 transition-colors"
+            href="#demo"
           >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
+            Request a Demo
           </a>
           <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            className="rounded-full border border-blue-600 text-blue-600 px-8 py-3 text-lg font-semibold hover:bg-blue-100 transition-colors"
+            href="#learn-more"
           >
-            Read our docs
+            Learn More
           </a>
         </div>
+
+        <div className="grid sm:grid-cols-3 gap-8 w-full max-w-4xl">
+          {['Telemedicine', 'Electronic Health Records', 'AI Diagnostics'].map((feature) => (
+            <div key={feature} className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold text-blue-800 mb-2">{feature}</h3>
+              <p className="text-gray-600">Innovative solutions to improve healthcare delivery and patient outcomes.</p>
+            </div>
+          ))}
+        </div>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      <footer className="flex justify-center items-center gap-6 text-sm text-gray-600">
+        <a href="#privacy" className="hover:text-blue-600">Privacy Policy</a>
+        <a href="#terms" className="hover:text-blue-600">Terms of Service</a>
+        <a href="#contact" className="hover:text-blue-600">Contact Us</a>
       </footer>
     </div>
   );
